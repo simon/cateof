@@ -1,0 +1,4 @@
+#/bin/sh
+echo cat \<\<EOF \> $1
+cat $1 | sed -e 's/\\/\\\\/g' | sed -e 's/\$/\\$/g'
+echo EOF
